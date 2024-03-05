@@ -50,20 +50,26 @@ if (nOne === 8 || nTwo === 8 || nOne + nTwo === 8 || nOne - nTwo === 8) {
 
 const totalShoppingCart = 30
 let shippingCost = 10
-let total
-if (totalShoppingCart >= 50) {
-  shippingCost === 0
+
+if (totalShoppingCart > 50) {
+  console.log('Ex5) The total amount is', totalShoppingCart)
 } else {
-  totalShoppingCart + shippingCost
+  console.log('Ex5) The total amount is', totalShoppingCart + shippingCost)
 }
-console.log('Ex5) The total amount is', total)
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let blackFriday = totalShoppingCart * 0.2
+let discountedTotal = totalShoppingCart - blackFriday
+
+if (discountedTotal > 50) {
+  console.log('Ex6) The total amount is', discountedTotal)
+} else {
+  console.log('Ex6) The total amount is', discountedTotal + shippingCost)
+}
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -71,20 +77,47 @@ console.log('Ex5) The total amount is', total)
   Alla fine mostra il risultato in console.
 */
 
-const arrayOne = [3, 12, 15]
-arrayOne.sort(function (a, b) {
-  return b - a
-})
-console.log('Ex7) Decrescent order:', arrayOne)
+let n1 = 4
+let n2 = 9
+let n3 = 15
+
+if (n1 >= n2) {
+  if (n3 >= n1) {
+    console.log(n3, n1, n2)
+  } else {
+    if (n3 >= n2) {
+      console.log(n1, n3, n2)
+    } else {
+      console.log(n1, n2, n3)
+    }
+  }
+} else {
+  if (n3 >= n1) {
+    console.log(n3, n2, n1)
+  } else {
+    if (n3 >= n1) {
+      console.log(n2, n3, n1)
+    } else {
+      console.log(n2, n1, n3)
+    }
+  }
+}
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
 
-function check(valore) {
+/*function check(valore) {
   return typeof valore === 'number'
 }
-console.log('Ex8) This is a number', check(8))
+console.log('Ex8) This is a number', check(8))*/
+
+let test = 'test'
+if (typeof test === 'number') {
+  console.log('Ex8) It is a number!')
+} else {
+  console.log('Ex8) It is not a number!')
+}
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
@@ -148,10 +181,13 @@ console.log('Ex13)', me)
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const list = []
+list.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+console.log('Ex14)', list)
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+list.splice(9, 1, 100)
+console.log('Ex15)', list)
