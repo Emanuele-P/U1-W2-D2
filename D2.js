@@ -90,7 +90,12 @@ console.log('Ex8) This is a number', check(8))
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let oddorEven = 7
+if (oddorEven % 2 === 0) {
+  console.log('Ex9) This number is Even')
+} else {
+  console.log('Ex10) This number is Odd')
+}
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
@@ -104,7 +109,14 @@ console.log('Ex8) This is a number', check(8))
     }
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let val = 7
+if (val < 5) {
+  console.log('Meno di 5')
+} else if (val < 10) {
+  console.log('Meno di 10')
+} else {
+  console.log('Uguale a 10 o maggiore')
+}
 
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
@@ -115,20 +127,22 @@ const me = {
   lastName: 'Doe',
   skills: ['javascript', 'html', 'css'],
 }
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+me.city = 'Toronto'
+console.log('Ex11)', me)
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+delete me.lastName
+console.log('Ex12)', me)
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+me.skills.pop()
+console.log('Ex13)', me)
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
